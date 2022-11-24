@@ -8,12 +8,13 @@ import { PatientSearchComponent } from './patient-search/patient-search.componen
 import { PatientDeleteComponent } from './patient-delete/patient-delete.component';
 import { Route, RouterModule, Routes } from '@angular/router';
 import { ViewAllPatientComponent } from './view-all-patient/view-all-patient.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 const myRoute:Routes= [
   {path:"",component:PatientEntryComponent},
   {path:"search",component:PatientSearchComponent},
   {path:"delete",component:PatientDeleteComponent},
-  {path:"viewallpatients",component:ViewAllPatientComponent}
+  {path:"view",component:ViewAllPatientComponent}
 ]
 
 @NgModule({
@@ -23,13 +24,13 @@ const myRoute:Routes= [
     PatientSearchComponent,
     PatientDeleteComponent,
     ViewAllPatientComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule,
     RouterModule.forRoot(myRoute)
-
   ],
   providers: [],
   bootstrap: [AppComponent]

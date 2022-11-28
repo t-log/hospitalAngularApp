@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./patient-entry.component.css']
 })
 export class PatientEntryComponent {
+  name=""
+  id=""
+  address=""
+  contact=""
+  doa=""
+  image=""
+  docName=""
 
+  patientEntry=()=>
+  {
+    let patData:any = {"name":this.name,"id":this.id,"address":this.address,
+                        "contact":this.contact,"doa":this.doa,"image":this.image,
+                        "docName":this.docName}
+
+    console.log(patData)
+  }
 }

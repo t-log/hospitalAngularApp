@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./patient-search.component.css']
 })
 export class PatientSearchComponent {
-
+  namer=""
+  patSearch=()=>
+  {
+    let patData = {"name":this.namer}
+    console.log(patData)
+  }
 }
